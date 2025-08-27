@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guía Completa Bug Bounty — 80+ herramientas, plataformas y recursos</title>
+  <style>
+    :root{--bg:#0b1020;--card:#0f1730;--muted:#9ba9ff;--link:#9fc1ff}
+    body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#e7ecff;margin:0;padding:28px}
+    .container{max-width:1200px;margin:0 auto}
+    header{display:flex;justify-content:space-between;align-items:center}
+    h1{margin:0;font-size:28px}
+    .lead{color:#b7c1ff}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:18px}
+    .card{background:var(--card);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.04)}
+    a{color:var(--link)}
+    .links{display:flex;flex-direction:column;gap:8px}
+    footer{color:var(--muted);margin-top:20px;text-align:center}
+    .muted{color:#aebcff;font-size:0.95rem}
+    ul.simple{padding-left:18px;margin:6px 0}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px}
+    .tool{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Guía Completa de Bug Bounty — Recursos y Herramientas</h1>
+        <div class="lead">Plataformas, roadmaps, perfiles, blogs y <strong>80+ herramientas</strong> (compiladas desde GitHub, BlackArch y listas "awesome").</div>
+      </div>
+      <div class="muted">Actualizado: 27 agosto 2025</div>
+    </header>
+
+    <main>
+      <section class="grid" style="margin-top:12px">
+        <article class="card">
+          <h2>Plataformas y programas</h2>
+          <div class="links">
+            <a target="_blank" rel="noopener" href="https://hackerone.com/">HackerOne</a>
+            <a target="_blank" rel="noopener" href="https://bugcrowd.com/">Bugcrowd</a>
+            <a target="_blank" rel="noopener" href="https://intigriti.com/">Intigriti</a>
+            <a target="_blank" rel="noopener" href="https://yeswehack.com/">YesWeHack</a>
+            <a target="_blank" rel="noopener" href="https://openbugbounty.org/">Open Bug Bounty</a>
+            <a target="_blank" rel="noopener" href="https://www.synack.com/red-team/">Synack</a>
+            <a target="_blank" rel="noopener" href="https://bugbounty.google.com/">Google Vulnerability Reward Program</a>
+            <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/msrc/bounty">Microsoft Bug Bounty</a>
+            <a target="_blank" rel="noopener" href="https://hackerone.com/helps/misc/bug-bounty-programs">Listado de programas públicos (recopilación)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Roadmaps, repos y cheat-sheets (GitHub)</h2>
+          <div class="links">
+            <a target="_blank" rel="noopener" href="https://github.com/nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters">Resources for Beginners — NahamSec</a>
+            <a target="_blank" rel="noopener" href="https://github.com/vavkamil/awesome-bugbounty-tools">Awesome BugBounty Tools (lista)</a>
+            <a target="_blank" rel="noopener" href="https://github.com/bittentech/Bug-Bounty-Beginner-Roadmap">Bug Bounty Beginner Roadmap</a>
+            <a target="_blank" rel="noopener" href="https://github.com/devanshbatham/Awesome-Bugbounty-Writeups">Awesome Writeups</a>
+            <a target="_blank" rel="noopener" href="https://github.com/danielmiessler/SecLists">SecLists — wordlists y payloads</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Canales YouTube & creados por bughunters</h2>
+          <div class="links">
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/nahamsec">NahamSec</a>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/liveoverflow">LiveOverflow</a>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/c/portswigger">PortSwigger (Burp Labs)</a>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/c/Hacker0x01">Hacker001 / Web Hacking</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Blogs, Medium y publicaciones</h2>
+          <div class="links">
+            <a target="_blank" rel="noopener" href="https://portswigger.net/blog">PortSwigger Blog</a>
+            <a target="_blank" rel="noopener" href="https://blog.hackerone.com/">HackerOne Blog</a>
+            <a target="_blank" rel="noopener" href="https://infosecwriteups.com/">Medium — Infosec Writeups</a>
+            <a target="_blank" rel="noopener" href="https://medium.com/">Medium (busca: bug bounty, writeups)</a>
+            <a target="_blank" rel="noopener" href="https://www.redicti.com/">Blogs personales de investigadores (usa la sección de perfiles abajo)</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="card" style="margin-top:14px">
+        <h2>Perfiles recomendados — X (Twitter) y LinkedIn</h2>
+        <div class="muted">(Ejemplos de cuentas que comparten hallazgos, writeups y tips — busca su perfil en X/LinkedIn)</div>
+        <ul class="simple">
+          <li>NahamSec (@nahamsec) — writeups, CTFs y automations</li>
+          <li>LiveOverflow (@liveoverflow) — explicaciones técnicas y PoC</li>
+          <li>Jcarver / PortSwigger researchers — análisis y herramientas</li>
+          <li>Investigadores individuales: busca "bug bounty writeup" y la etiqueta #bugbounty en X</li>
+        </ul>
+      </section>
+
+      <section class="card" style="margin-top:12px">
+        <h2>Herramientas — LISTA DE 80+ (enlaces directos a repos/landing)</h2>
+        <p class="muted">Incluye herramientas de recon, enumeración DNS, fuzzing, scanners de vulnerabilidades, explotación, detection of secrets y utilidades. (Compiladas desde GitHub, BlackArch, listas "awesome" y docs de ProjectDiscovery).</p>
+
+        <div class="tools-grid" style="margin-top:10px">
+          <div class="tool"><a target="_blank" rel="noopener" href="https://portswigger.net/burp">Burp Suite</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/zaproxy/zaproxy">OWASP ZAP</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei">Nuclei</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates">Nuclei Templates</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/httpx">httpx</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/subfinder">subfinder</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/OWASP/Amass">Amass</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/naabu">naabu</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/dnsx">dnsx</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/blechschmidt/massdns">massdns</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/robertdavidgraham/masscan">masscan</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/zmap/zmap">zmap</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/zmap/zgrab2">zgrab2</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/ffuf/ffuf">ffuf</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/OJ/gobuster">gobuster</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/maurosoria/dirsearch">dirsearch</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/v0re/dirb">dirb</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/epi052/feroxbuster">feroxbuster</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/tomnomnom/waybackurls">waybackurls</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/lc/gau">gau</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/bp0lr/gauplus">gauplus</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/tomnomnom/assetfinder">assetfinder</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/aboul3la/Sublist3r">Sublist3r</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/Findomain/Findomain">Findomain</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/s0md3v/Photon">Photon</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/hakluke/hakrawler">hakrawler</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/jaeles-project/gospider">gospider</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/katana">Katana (crawler)</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/michenriksen/aquatone">Aquatone</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/FortyNorthSecurity/EyeWitness">EyeWitness</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/urbanadventurer/webscreenshot">Webscreenshot</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/sqlmapproject/sqlmap">sqlmap</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/codingo/NoSQLMap">NoSQLMap</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/s0md3v/XSStrike">XSStrike</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/hahwul/dalfox">DalFox</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/epsylon/xsser">XSSer</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/beefproject/beef">BeEF</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/commixproject/commix">Commix</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/maK-/parameth">Parameth</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/s0md3v/Arjun">Arjun</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/devanshbatham/ParamSpider">ParamSpider</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/codingo/Interlace">Interlace</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/darkoperator/dnsrecon">dnsrecon</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/elceef/dnstwist">dnstwist</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/clarketm/urlcrazy">urlcrazy</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/haccer/subjack">subjack</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/PentestPad/subzy">subzy</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/Ice3man543/SubOver">SubOver</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/notify">notify (ProjectDiscovery)</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/uncover">uncover</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/chaos-client">chaos-client</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/dwisiswant0/crlfuzz">CRLFuzz</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/MichaelStott/CRLF-Injection-Scanner">CRLF-Injection-Scanner</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/s0md3v/Corsy">Corsy</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/chenjj/CORScanner">CORScanner</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/Shivangx01b/CorsMe">CorsMe</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/PortSwigger/turbo-intruder">Turbo Intruder</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/pwntester/logger-plus-plus">Logger++ (Burp)</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/zricethezav/gitleaks">Gitleaks</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/michenriksen/gitrob">Gitrob</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/awslabs/git-secrets">git-secrets</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/trufflesecurity/trufflehog">TruffleHog</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/Yelp/detect-secrets">detect-secrets</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/achillean/shodan-python">Shodan (CLI/API)</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/urbanadventurer/WhatWeb">WhatWeb</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/wappalyzer/wappalyzer">Wappalyzer</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/EnableSecurity/wafw00f">wafw00f</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/six2dez/reconftw">reconFTW</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/shuffledns">shuffledns</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/infosec-au/altdns">altdns</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/assetnote/dnsgen">dnsgen</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/guelfoweb/knock">knockpy</a></div>
+
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/UnaPibaGeek/ctfr">ctfr (CT/finder)</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/smicallef/spiderfoot">SpiderFoot</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://crt.sh/">crt.sh (Certificate Transparency search)</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/danielmiessler/SecLists">SecLists</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/swisskyrepo/PayloadsAllTheThings">PayloadsAllTheThings</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/lanmaster53/recon-ng">recon-ng</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/xmendez/wfuzz">Wfuzz</a></div>
+          <div class="tool"><a target="_blank" rel="noopener" href="https://github.com/sullo/nikto">Nikto</a></div>
+        </div>
+
+        <p class="muted" style="margin-top:10px">Si quieres, puedo reorganizar estas 80 herramientas por categorías (Recon, DNS, Fuzzing, XSS, SQLi, Mobile, Post‑exploitation, CI/CD / secrets) o crear una tabla/CSV/cheat-sheet con comandos prácticos.</p>
+      </section>
+
+      <section class="card" style="margin-top:12px">
+        <h2>Más recursos útiles</h2>
+        <ul class="simple">
+          <li><a target="_blank" rel="noopener" href="https://portswigger.net/web-security">PortSwigger Web Security Academy</a></li>
+          <li><a target="_blank" rel="noopener" href="https://hacker101.com/">Hacker101</a></li>
+          <li><a target="_blank" rel="noopener" href="https://tryhackme.com/">TryHackMe</a></li>
+          <li><a target="_blank" rel="noopener" href="https://www.hackthebox.com/">Hack The Box</a></li>
+        </ul>
+      </section>
+
+      <section class="card" style="margin-top:12px">
+        <h2>Consejos rápidos</h2>
+        <p class="muted">Mantén un flujo: <strong>Recon → Enumeración → Pruebas activas → PoC → Reporte</strong>. Centraliza hallazgos en un repo privado, usa Interactsh/Collaborator para OOB, automatiza con ProjectDiscovery (httpx, nuclei, notify) y respeta scope y reglas del programa.</p>
+      </section>
+
+    </main>
+
+
+  </div>
+</body>
+</html>
